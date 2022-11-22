@@ -11,60 +11,114 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <nav className={styles.nav}>
+        <p className={styles.logo}>butic</p>
+        <div className={styles.centerDiv}>
+          <p>Home</p>
+          <p>Como funciona</p>
+          <p>FAQ</p>
+        </div>
+        <button className={styles.startButton}>Start</button>
+      </nav>
+
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className={styles.phrase}>
+          <p className={styles.phrase1}>Tu tienda digital.</p>
+          <p className={styles.phrase2}>En crypto.</p>
         </div>
       </main>
 
+      <section>
+        <div className={styles.facts}>
+          <div className={styles.facts1}>
+            <div className={styles.fact}>
+              <p className={styles.h3}>Elegi tu propia moneda</p>
+              <Image src='/btc.png' alt='stats' width={120} height={30}/>
+              <p className={styles.h4}>Publicás tus productos en pesos, dólares o euros, y cobrás en Bitcoin a la cotización del momento de la venta.</p>
+            </div>
+            <div className={styles.fact}>
+              <p className={styles.h3}>Bitcoin Lighting Network</p>
+              <Image src='/lighting.png' alt='stats' width={40} height={50}/>
+              <p className={styles.h4}>Retiro instantaneo! Los saldos de la venta se acreditan en el acto.</p>
+            </div>
+          </div>
+          <div className={styles.facts2}>
+            <div className={styles.item1}>
+              <p className={styles.subitem1}>Plan base</p>
+              <p className={styles.subitem2}>Creas tu tienda gratis y solo pagas cuando empezas a vender</p>
+            </div>
+            <div className={styles.item2}>
+              <p className={styles.subitem3}>$0 x mes</p>
+              <p className={styles.subitem4}>3% costo por transaccion</p>
+            </div>
+            <div className={styles.item3}>
+              <p className={styles.ventajas}>✓ Tiendas, productos y ventas ilimitadas</p>
+              <p className={styles.ventajas}>✓ Integracion de pagos con Bitcoin Lighting Network</p>
+              <p className={styles.ventajas}>✓ Actualizacion de cambios en tiempo real</p>
+              <p className={styles.ventajas}>✓ Boton de WhatsApp</p>
+              <p className={styles.ventajas}>✓ Codigo QR de acceso a la tienda</p>
+            </div>
+            <button className={styles.buttonCrear}>Crea tu tienda gratis</button>
+          </div>
+          <div className={styles.facts3}>
+            <div className={styles.fact}>
+              <p className={styles.h3}>Comisiones mínimas</p>
+              <Image src='/chart.png' alt='stats' width={100} height={100}/>
+              <p className={styles.h4}>Vendé con comisiones bajísimas, sin costos ocultos ni de mantenimiento.</p>
+            </div>
+            <div className={styles.fact}>
+              <p className={styles.h3}>Cobra sin demoras</p>
+              <Image src='/10x.png' alt='stats' width={80} height={40}/>
+              <p className={styles.h4}>mas rapido que Mercado Libre. <span className={styles.h4Gray}>Tu cliente recibe el producto y vos tu plata, sin costos adicionales.</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.text}>
+        <h2 className={styles.phrase}>Comprar y vender, sin barreras.</h2>
+      </section>
+
+      <section className={styles.opciones}>
+        <div className={styles.opcionesContainer}>
+          <div className={styles.tienda}>
+            <div className={styles.opcionContainer}>
+              <h4 className={styles.opcion}>Soy una tienda</h4>
+              <Image src='/store.png' alt='store' width={20} height={20}/>
+            </div>
+            <p className={styles.detalleText}>Te contamos cómo crear tu primera tienda, los pasos del proceso de venta y de cobro.</p>
+            <button className={styles.detalleButton}>Ver detalle</button>
+          </div>
+          <div className={styles.tienda}>
+            <div className={styles.opcionContainer}>
+              <h4 className={styles.opcion}>Soy un cliente</h4>
+              <Image src='/person.png' alt='person' width={15} height={15}/>
+            </div>
+            <p className={styles.detalleText}>Te contamos los pasos del proceso de compra, cómo se realiza el pago y la entrega del producto.</p>
+            <button className={styles.detalleButton}>Ver detalle</button>
+          </div>
+        </div>
+        <div className={styles.venderDiv}>
+          <p className={styles.venderText}>
+            Creá tu tienda en minutos, carga tus productos y empeza a cobrar en crypto. ¿Que esperas?
+          </p>
+          <button className={styles.venderButton}>
+            Empezar a vender
+          </button>
+        </div>
+      </section>
+
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <div className={styles.footerDiv1}>
+          <p className={styles.logo2}>butic</p>
+          <p className={styles.contact}>Instagram</p>
+          <p className={styles.contact}>Twitter</p>
+          <p className={styles.contact}>Linkedin</p>
+          <p className={styles.contact}>Contact</p>
+        </div>
+        <div className={styles.footerDiv2}>
+          <p className={styles.contact}>Terminos y condiciones</p>
+        </div>
       </footer>
     </div>
   )
